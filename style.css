@@ -22,6 +22,15 @@ body {
     gap: 20px;
 }
 
+@media (max-width:768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+        overflow-y: auto;
+        padding: 10px;
+    }
+}
+
 .left-section {
     flex: 1;
     display: flex;
@@ -29,9 +38,21 @@ body {
     min-width: 0;
 }
 
+@media (max-width:768px) {
+    .left-section {
+        flex: none;
+    }
+}
+
 .right-section {
     flex: 1;
     min-width: 0;
+}
+
+@media (max-width:768px) {
+    .right-section {
+        flex: none;
+    }
 }
 
 h1 {
@@ -78,6 +99,15 @@ textarea {
     font-family: inherit;
 }
 
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
 button {
     background-color: #3498db;
     color: white;
@@ -103,6 +133,12 @@ button:hover {
     overflow-y: auto;
 }
 
+@media (max-width:768px) {
+    .player-list {
+        max-height: 300px;
+    }
+}
+
 #playerList {
     list-style: none;
 }
@@ -120,6 +156,7 @@ button:hover {
     display: flex;
     gap: 8px;
     margin-bottom: 15px;
+    flex-wrap: wrap;
 }
 
 .result-section {
@@ -129,6 +166,12 @@ button:hover {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     height: 100%;
     overflow-y: auto;
+}
+
+@media (max-width:768px) {
+    .result-section {
+        max-height: 400px;
+    }
 }
 
 .group {
